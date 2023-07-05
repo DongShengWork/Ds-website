@@ -1,0 +1,50 @@
+{
+  "vite": true,
+  "externals": {
+    "react": "window.React",
+    "react-dom": "window.ReactDOM"
+  },
+  "plugins": [
+    [
+      "build-plugin-antd",
+      {
+        "themeConfig": {
+          "@primary-background-color": "#4e61d4",
+          "@text-color": "#222",
+          "@font-size-base": "12px",
+          "@font-size-small": "12px",
+          "@primary-color": "#4e61d4"
+        }
+      }
+    ],
+    [
+      "build-plugin-moment-locales",
+      {
+        "locales": ["zh-cn"]
+      }
+    ],
+    [
+      "build-plugin-load-assets",
+      {
+        "assets": {
+          "start": [
+            "https://g.alicdn.com/code/lib/ali-oss/6.13.0/aliyun-oss-sdk.min.js",
+            "https://g.alicdn.com/code/lib/babel-standalone/7.21.2/babel.min.js",
+            "https://g.alicdn.com/code/lib/prettier/2.0.3/standalone.min.js",
+            "https://g.alicdn.com/code/lib/prettier/2.0.3/parser-typescript.min.js",
+            "https://g.alicdn.com/code/lib/react/17.0.2/umd/react.development.min.js",
+            "https://g.alicdn.com/code/lib/react-dom/17.0.2/umd/react-dom.development.min.js"
+          ],
+          "build": [
+            "https://g.alicdn.com/code/lib/ali-oss/6.13.0/aliyun-oss-sdk.min.js",
+            "https://g.alicdn.com/code/lib/babel-standalone/7.21.2/babel.min.js",
+            "https://g.alicdn.com/code/lib/prettier/2.0.3/standalone.min.js",
+            "https://g.alicdn.com/code/lib/prettier/2.0.3/parser-typescript.min.js",
+            "https://g.alicdn.com/code/lib/react/17.0.2/umd/react.development.min.js",
+            "https://g.alicdn.com/code/lib/react-dom/17.0.2/umd/react-dom.development.min.js"
+          ]
+        }
+      }
+    ]
+  ]
+}
