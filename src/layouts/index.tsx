@@ -1,3 +1,3 @@
 export default () => {
-  return <div>1223</div>
+  return <div>个人主页</div>
 }

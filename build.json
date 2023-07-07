@@ -28,20 +28,12 @@
       {
         "assets": {
           "start": [
-            "https://g.alicdn.com/code/lib/ali-oss/6.13.0/aliyun-oss-sdk.min.js",
-            "https://g.alicdn.com/code/lib/babel-standalone/7.21.2/babel.min.js",
-            "https://g.alicdn.com/code/lib/prettier/2.0.3/standalone.min.js",
-            "https://g.alicdn.com/code/lib/prettier/2.0.3/parser-typescript.min.js",
             "https://g.alicdn.com/code/lib/react/17.0.2/umd/react.development.min.js",
             "https://g.alicdn.com/code/lib/react-dom/17.0.2/umd/react-dom.development.min.js"
           ],
           "build": [
-            "https://g.alicdn.com/code/lib/ali-oss/6.13.0/aliyun-oss-sdk.min.js",
-            "https://g.alicdn.com/code/lib/babel-standalone/7.21.2/babel.min.js",
-            "https://g.alicdn.com/code/lib/prettier/2.0.3/standalone.min.js",
-            "https://g.alicdn.com/code/lib/prettier/2.0.3/parser-typescript.min.js",
-            "https://g.alicdn.com/code/lib/react/17.0.2/umd/react.development.min.js",
-            "https://g.alicdn.com/code/lib/react-dom/17.0.2/umd/react-dom.development.min.js"
+            "https://g.alicdn.com/code/lib/react/17.0.2/umd/react.production.min.js",
+            "https://g.alicdn.com/code/lib/react-dom/17.0.2/umd/react-dom.production.min.js"
           ]
         }
       }
