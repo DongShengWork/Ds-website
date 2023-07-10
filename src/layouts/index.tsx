@@ -1,21 +1,25 @@
 import ReactFullpage from '@fullpage/react-fullpage';
-import { useEffect } from 'react';
+import { useLayoutEffect, useState } from 'react';
 import config from './config';
 import './index.less';
 
 export default () => {
-  useEffect(() => {
-    document.querySelectorAll('.section').forEach(item => {
-      const mask: any = item.querySelector('.mask');
-      const img: any = item.querySelector('img');
-      const { width , height} = img?.getBoundingClientRect();
-      mask.style.width = width + 'px'
-      mask.style.height = height + 'px'
-    })
-    
+  const [spin, setSpin] = useState(true);
+  useLayoutEffect(() => {
+    setTimeout(() => {
+      document.querySelectorAll('.section').forEach((item) => {
+        const mask: any = item.querySelector('.mask');
+        const img: any = item.querySelector('.logo');
+        const { width, height } = img?.getBoundingClientRect();
+        mask.style.width = width + 'px';
+        mask.style.height = height + 'px';
+        console.log(width, height);
+      });
+      setSpin(false);
+    }, 500);
   }, []);
   return (
-    <div className="app-pages">
+    <div className="app-pages" style={{ visibility: spin ? 'hidden' : 'visible' }}>
       <ReactFullpage
         credits={{
           enabled: false,
@@ -73,7 +77,7 @@ export default () => {
                           </svg>
                         </a>
                       </div>
-                      <img src={item.src} />
+                      <img src={item.src} className="logo" />
                     </div>
                   </div>
                 );
