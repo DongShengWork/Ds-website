@@ -20,21 +20,21 @@
       flex-direction: column;
       gap: 10px;
       .desc {
-        height: 40px;
-        width: 200px;
+        height: 30px;
+        width: 180px;
         background-color: #4e61d4;
         color: #fff;
         display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 6px;
+        font-size: 12px;
         a{
           color:#fff;
+          display: flex;
+          align-items: center;
+          gap: 10px;
         }
-      }
-      img {
-        width: 100%;
-        height: calc(100% - 40px);
       }
     }
   }
@@ -48,4 +48,32 @@
   bottom: 4px;
   right: 40px;
   border-radius: 4px;
+}
+
+// 宽度 小于 500
+@media (max-width: 500px) {
+  .app-pages{
+    .main {
+      img {
+        width: auto !important;
+        height: calc(100% - 300px) !important;
+        position: relative;
+        transform: rotate(90deg);
+        top: 125px;
+        
+      }
+    }
+  }
+}
+
+// 宽度 小于 2000
+@media (max-width: 1000px) {
+  .app-pages{
+    .main {
+      img {
+        width: 100%;
+        height: calc(100% - 30px);
+      }
+    }
+  }
 }

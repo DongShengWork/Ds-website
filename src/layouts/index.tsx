@@ -23,7 +23,6 @@ export default () => {
                       <div className="desc">
                         <a href={item.href} target="_blank">
                           {item.title}
-                          &nbsp;&nbsp;&nbsp;
                           <svg
                             className="icon"
                             viewBox="0 0 1024 1024"
