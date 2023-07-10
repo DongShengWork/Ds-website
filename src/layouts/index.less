@@ -5,22 +5,31 @@
     align-items: center;
     justify-content: center;
     .fp-overflow {
-      img{
-        box-shadow: 0px 1px 9px 3px #d1cece87;
+      img {
+        border: 1px solid #f2f2f2;
       }
     }
     .main {
-      height: 100vh;
-      width: 100vw;
-      padding: 40px;
-      padding-top: 10px;
+      height: 90vh;
+      width: 90vw;
       position: relative;
+      overflow: hidden;
       display: flex;
       align-items: center;
-      flex-direction: column;
+      justify-content: center;
+      .mask {
+        position: absolute;
+        z-index: 1;
+        background-color: #00000020;
+      }
       .desc {
         height: 40px;
         width: 180px;
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         background-color: #4e61d4;
         color: #fff;
         display: flex;
@@ -29,50 +38,28 @@
         border-radius: 6px;
         font-size: 12px;
         margin-bottom: 10px;
-        a{
-          color:#fff;
+        a {
+          color: #fff;
           display: flex;
           align-items: center;
-          gap: 10px;
         }
       }
       img {
-        width: 100%;
-        height: calc(100% - 40px);
+        width: auto;
+        height: 100%;
       }
     }
   }
-}
-.beian{
-  position: absolute;
-  padding: 4px 8px;
-  background-color: #4e61d4;
-  color: #fff;
-  font-size: 12px;
-  bottom: 6px;
-  right: 40px;
-  border-radius: 4px;
 }
 
 // 宽度 小于 500
 @media (max-width: 500px) {
-  .app-pages{
+  .app-pages {
     .main {
-      .desc{
-        height: 30px !important;
-      }
       img {
-        width: auto !important;
-        height: calc(100% - 300px) !important;
-        position: relative;
-        transform: rotate(90deg);
-        top: 125px;
-        
+        width: 100% !important;
+        height: auto !important;
       }
     }
   }
-  // .beian{
-  //   right: 60px;
-  // }
 }
-

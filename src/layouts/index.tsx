@@ -1,8 +1,19 @@
 import ReactFullpage from '@fullpage/react-fullpage';
+import { useEffect } from 'react';
 import config from './config';
 import './index.less';
 
 export default () => {
+  useEffect(() => {
+    document.querySelectorAll('.section').forEach(item => {
+      const mask: any = item.querySelector('.mask');
+      const img: any = item.querySelector('img');
+      const { width , height} = img?.getBoundingClientRect();
+      mask.style.width = width + 'px'
+      mask.style.height = height + 'px'
+    })
+    
+  }, []);
   return (
     <div className="app-pages">
       <ReactFullpage
@@ -13,6 +24,16 @@ export default () => {
         scrollingSpeed={600} /* Options here */
         navigation
         verticalCentered
+        controlArrows
+        anchors={[
+          'my-dev-tools',
+          'code-plaground',
+          'crud-model',
+          'unification-login',
+          'react-core-form',
+          'react-core-form-tools',
+          'react-core-form-designer',
+        ]}
         render={({ state, fullpageApi }) => {
           return (
             <ReactFullpage.Wrapper>
@@ -20,9 +41,11 @@ export default () => {
                 return (
                   <div className="section" key={item.title}>
                     <div className="main">
+                      <div className="mask" />
                       <div className="desc">
                         <a href={item.href} target="_blank">
                           {item.title}
+                          &nbsp;&nbsp;&nbsp;&nbsp;
                           <svg
                             className="icon"
                             viewBox="0 0 1024 1024"
@@ -35,17 +58,17 @@ export default () => {
                             <path
                               d="M924.402464 1023.068211H0.679665V99.345412h461.861399v98.909208H99.596867v725.896389h725.896389V561.206811h98.909208z"
                               p-id="7822"
-                              fill='#fff'
+                              fill="#fff"
                             ></path>
                             <path
                               d="M930.805104 22.977336l69.965436 69.965436-453.492405 453.492404-69.965435-69.901489z"
                               p-id="7823"
-                              fill='#fff'
+                              fill="#fff"
                             ></path>
                             <path
                               d="M1022.464381 304.030081h-98.917201V99.345412H709.230573V0.428211h313.233808z"
                               p-id="7824"
-                              fill='#fff'
+                              fill="#fff"
                             ></path>
                           </svg>
                         </a>
@@ -59,7 +82,7 @@ export default () => {
           );
         }}
       />
-      <div className="beian">浙ICP备2013019046</div>
+      {/* <div className="beian">浙ICP备2013019046</div> */}
     </div>
   );
 };
