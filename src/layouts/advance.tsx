@@ -2,21 +2,10 @@ const menus = [
   {
     title: 'es6 入门',
     icon: (
-      <svg
-        className="icon"
-        viewBox="0 0 1024 1024"
-        version="1.1"
-        xmlns="http://www.w3.org/2000/svg"
-        p-id="8322"
-        width="50"
-        height="50"
-      >
-        <path
-          d="M0 0h1024v1024H0V0z m940.117333 779.776c-7.466667-46.72-37.888-85.973333-128.128-122.581333-31.402667-14.72-66.304-24.96-76.672-48.64-3.882667-14.08-4.48-21.76-1.962666-30.08 6.4-27.562667 39.04-35.84 64.64-28.16 16.64 5.12 32 17.92 41.642666 38.4 44.117333-28.842667 44.117333-28.842667 74.88-48-11.52-17.92-17.237333-25.642667-25.002666-33.28-26.88-30.08-62.677333-45.44-120.917334-44.117334l-30.08 3.797334c-28.842667 7.04-56.32 22.4-72.96 42.88-48.64 55.082667-34.602667 151.082667 24.277334 190.762666 58.24 43.52 143.402667 53.077333 154.282666 94.08 10.24 49.92-37.12 65.92-83.882666 60.16-34.602667-7.68-53.76-25.002667-74.88-57.002666l-78.08 44.842666c8.96 20.48 19.2 29.397333 34.56 47.317334 74.24 74.922667 259.84 71.082667 293.162666-42.837334 1.237333-3.84 10.24-30.08 3.157334-70.4l1.962666 2.858667z m-383.274666-309.12h-95.914667c0 82.688-0.384 164.864-0.384 247.68 0 52.565333 2.688 100.821333-5.888 115.669333-14.08 29.397333-50.346667 25.642667-66.816 20.48-16.896-8.362667-25.472-19.882667-35.413333-36.48-2.688-4.48-4.693333-8.362667-5.418667-8.362666l-77.866667 48c13.013333 26.88 32 50.005333 56.490667 64.725333 36.48 21.76 85.504 28.8 136.832 17.28 33.408-9.642667 62.208-29.482667 77.269333-60.202667 21.76-39.68 17.152-88.32 16.938667-142.762666 0.512-87.637333 0-175.317333 0-263.637334l0.170667-2.389333z"
-          fill="#f4ea2a"
-          p-id="8323"
-        ></path>
-      </svg>
+      <img
+        src="https://lucifer.ren/fe-interview/assets/imgs/topics/js/js-cover.png"
+        style={{ width: 50, height: 50 }}
+      />
     ),
     href: 'https://es6.ruanyifeng.com/',
   },
@@ -79,9 +68,55 @@ const menus = [
   },
   {
     title: '大前端面试宝典',
-    icon: <img src='https://p.ipic.vip/jiysdy.jpg' style={{ width: 50, height: 50 }} />,
-    href: 'https://lucifer.ren/fe-interview'
-  }
+    icon: (
+      <img src="https://static.vue-js.com/b4b71a30-443b-11eb-85f6-6fac77c0c9b3.png" style={{ width: 50, height: 50 }} />
+    ),
+    href: 'https://lucifer.ren/fe-interview',
+  },
+  {
+    title: '🔥 LeetCode 刷题',
+    icon: (
+      <img
+        src="https://my-dev-ops.oss-cn-beijing.aliyuncs.com/website/leetcode.png"
+        style={{ width: 50, height: 50 }}
+      />
+    ),
+    href: 'https://leetcode.cn/leetbook/',
+  },
+  {
+    title: 'Dumi',
+    icon: (
+      <img src="https://img.alicdn.com/tfs/TB1YHEpwUT1gK0jSZFhXXaAtVXa-28-27.svg" style={{ width: 50, height: 50 }} />
+    ),
+    href: 'https://v1.d.umijs.org/zh-CN',
+  },
+  {
+    title: 'ice 飞冰',
+    icon: <img src="https://v3.ice.work/img/logo.png" style={{ width: 50, height: 50 }} />,
+    href: 'https://v3.ice.work/docs/guide/start/',
+  },
+  {
+    title: 'Umijs',
+    icon: (
+      <img src="https://img.alicdn.com/tfs/TB1YHEpwUT1gK0jSZFhXXaAtVXa-28-27.svg" style={{ width: 50, height: 50 }} />
+    ),
+    href: 'https://v3.umijs.org/zh-CN/docs',
+  },
+  {
+    title: 'Ant-Design',
+    icon: <img src='https://gw.alipayobjects.com/zos/rmsportal/rlpTLlbMzTNYuZGGCVYM.png' style={{ width: 50, height: 50 }} />,
+    href: 'https://4x.ant.design/components/input-cn/',
+  },
+  {
+    title: '腾讯课堂',
+    icon: <img src="https://cdn-cos-ke.myoed.com/ke_proj/core/_next/static/media/logo.856c5cac.png" style={{ width: 50, height: 50 }} />,
+    href: 'https://4x.ant.design/components/input-cn/',
+  },
+  {
+    title: '爪蛙教育',
+    icon: <img src="https://wechatapppro-1252524126.file.myqcloud.com/applnzi6vl27059/image/b_u_621352b3cf8f6_pnR6LH8h/l0c8rt6o0xge.png" style={{ width: 50, height: 50 }} />,
+    href: 'https://applnzi6vl27059.pc.xiaoe-tech.com/',
+  },
 ];
 
 export default () => {
@@ -89,9 +124,13 @@ export default () => {
     <div className="app-advance">
       {[...menus, ...menus, ...menus, ...menus].map((menu) => {
         return (
-          <div key={menu.title} className="app-advance-item" onClick={() => {
-            window.open(menu.href)
-          }}>
+          <div
+            key={menu.title}
+            className="app-advance-item"
+            onClick={() => {
+              window.open(menu.href);
+            }}
+          >
             <i>{menu.icon}</i>
             <span>{menu.title}</span>
           </div>
