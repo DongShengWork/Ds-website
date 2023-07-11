@@ -77,6 +77,11 @@ const menus = [
     icon: <img src="http://resource.muyiy.cn/image/20200106214930.jpg" style={{ width: 50, height: 50 }} />,
     href: 'https://muyiy.cn/blog/',
   },
+  {
+    title: '大前端面试宝典',
+    icon: <img src='https://p.ipic.vip/jiysdy.jpg' style={{ width: 50, height: 50 }} />,
+    href: 'https://lucifer.ren/fe-interview'
+  }
 ];
 
 export default () => {
