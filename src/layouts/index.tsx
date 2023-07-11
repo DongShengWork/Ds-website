@@ -32,6 +32,7 @@ export default () => {
         verticalCentered
         controlArrows
         anchors={[
+          'advance',
           'my-dev-tools',
           'code-plaground',
           'crud-model',
