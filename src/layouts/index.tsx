@@ -1,5 +1,6 @@
 import ReactFullpage from '@fullpage/react-fullpage';
 import { useLayoutEffect, useState } from 'react';
+import Advance from './advance';
 import config from './config';
 import './index.less';
 
@@ -10,10 +11,11 @@ export default () => {
       document.querySelectorAll('.section').forEach((item) => {
         const mask: any = item.querySelector('.mask');
         const img: any = item.querySelector('.logo');
-        const { width, height } = img?.getBoundingClientRect();
-        mask.style.width = width + 'px';
-        mask.style.height = height + 'px';
-        console.log(width, height);
+        if (mask && img) {
+          const { width, height } = img?.getBoundingClientRect();
+          mask.style.width = width + 'px';
+          mask.style.height = height + 'px';
+        }
       });
       setSpin(false);
     }, 500);
@@ -41,6 +43,9 @@ export default () => {
         render={({ state, fullpageApi }) => {
           return (
             <ReactFullpage.Wrapper>
+              <div className="section">
+                <Advance />
+              </div>
               {config.map((item) => {
                 return (
                   <div className="section" key={item.title}>

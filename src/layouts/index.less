@@ -50,6 +50,34 @@
       }
     }
   }
+  .app-advance {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 60vw;
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background-color: #f8f8f8;
+      padding: 10px;
+      width: 120px;
+      height: 120px;
+      cursor: pointer;
+      transition: 0.5s;
+      opacity: .8;
+      &:hover {
+        transition: 0.5s;
+        box-shadow: 1px 2px 3px #eee;
+        opacity: 1;
+      }
+      span {
+        font-size: 12px;
+        margin-top: 8px;
+      }
+    }
+  }
 }
 
 // 宽度 小于 500
