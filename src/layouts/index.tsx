@@ -47,7 +47,7 @@ export default () => {
                 <Carousel
                   showArrow
                   autoPlay
-                  effect="fade"
+                  // effect="fade"
                   style={{ width: '90vw', height: '90vh' }}
                   pages={config.map((item) => {
                     return (
