@@ -92,7 +92,7 @@ export default () => {
           );
         }}
       />
-      {/* <div className="beian">浙ICP备2013019046</div> */}
+      <div className="beian">浙ICP备2013019046</div>
     </div>
   );
 };
