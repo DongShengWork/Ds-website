@@ -4,6 +4,7 @@ import config from './config';
 import { Carousel } from 'yl-design';
 import './index.less';
 import Tags from './tags';
+import About from './about';
 
 export default () => {
   return (
@@ -17,17 +18,15 @@ export default () => {
         navigation
         verticalCentered
         controlArrows
-        anchors={['about', 'advance', 'my-project', 'ssk']}
+        anchors={['about', 'my-project', 'my-points', 'advance']}
         render={({ state, fullpageApi }) => {
           return (
             <ReactFullpage.Wrapper>
               <div className="section">
                 <h1>关于我</h1>
+                <About />
               </div>
-              <div className="section">
-                <h1>相关推荐导航</h1>
-                <Advance />
-              </div>
+
               <div className="section">
                 <h1>相关作品集合</h1>
                 <Carousel
@@ -80,11 +79,14 @@ export default () => {
                 <h1>相关技术栈</h1>
                 <Tags />
               </div>
+              <div className="section">
+                <h1>前端进阶导航</h1>
+                <Advance />
+              </div>
             </ReactFullpage.Wrapper>
           );
         }}
       />
-      <div className="beian">浙ICP备2013019046</div>
     </div>
   );
 };
