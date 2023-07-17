@@ -8,14 +8,11 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      img {
-        border: 1px solid #f2f2f2;
-      }
     }
-    .carousel-page{
+    .carousel-page {
       border: 1px solid #eee;
     }
-    .yld-carousel-legend{
+    .yld-carousel-legend {
       border-bottom: 1px solid #eee;
     }
     .main {
@@ -59,30 +56,39 @@
   }
   .app-advance {
     display: flex;
-    gap: 10px;
+    gap: 20px;
     flex-wrap: wrap;
-    width: 800px;
+    width: 50vw;
     &-item {
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      background-color: #f8f8f8;
-      width: 150px;
-      height: 150px;
+      width: 100px;
+      height: 100px;
       cursor: pointer;
       transition: 0.5s;
       opacity: 0.8;
+      border-radius: 4px;
+      img {
+        border-radius: 50%;
+      }
       &:hover {
         transition: 0.5s;
-        box-shadow: 1px 2px 3px #eee;
+        background-color: #807d7d75;
         opacity: 1;
       }
       span {
+        padding: 4px;
         font-size: 12px;
         margin-top: 12px;
         color: #111;
         font-weight: 500;
+        width: 100px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        text-align: center;
       }
     }
   }

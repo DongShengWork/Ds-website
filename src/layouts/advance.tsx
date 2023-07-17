@@ -1,3 +1,5 @@
+import { Tooltip } from "yl-design";
+
 const menus = [
   {
     title: 'es6 入门',
@@ -22,7 +24,7 @@ const menus = [
   {
     title: 'JavaScript 知识图谱',
     icon: 'https://tsejx.github.io/javascript-guidebook/favicon.ico',
-    href: 'https://tsejx.github.io/javascript-guidebook/'
+    href: 'https://tsejx.github.io/javascript-guidebook/',
   },
   {
     title: 'web前端面试',
@@ -76,10 +78,9 @@ const menus = [
     width: 100,
   },
   {
-    title: '腾讯课堂',
-    icon: 'https://cdn-cos-ke.myoed.com/ke_proj/core/_next/static/media/logo.856c5cac.png',
-    href: 'https://4x.ant.design/components/input-cn/',
-    width: 100,
+    title: '渡一web前端频道',
+    icon: 'https://p3-pc.douyinpic.com/img/aweme-avatar/tos-cn-i-0813_9321dc52690f420ebcf65becc161bbc7~c5_300x300.jpeg?from=2956013662',
+    href: 'https://www.douyin.com/user/MS4wLjABAAAAi2oukRVcHpgD-HbVdzsxE7tYykr91YuIKukR_X_Yy08EFWRQhRrECDF6FvbvT8Xa',
   },
   {
     title: '爪蛙教育',
@@ -93,16 +94,18 @@ export default () => {
     <div className="app-advance">
       {menus.map((menu) => {
         return (
-          <div
-            key={menu.title}
-            className="app-advance-item"
-            onClick={() => {
-              window.open(menu.href);
-            }}
-          >
-            <img src={menu.icon} style={{ width: menu.width || 50, height: 50 }} />
-            <span>{menu.title}</span>
-          </div>
+          <Tooltip title={menu.title} placement="top" theme='dark'>
+            <div
+              key={menu.title}
+              className="app-advance-item"
+              onClick={() => {
+                window.open(menu.href);
+              }}
+            >
+              <img src={menu.icon} style={{ width: menu.width || 50, height: 50 }} />
+              <span>{menu.title}</span>
+            </div>
+          </Tooltip>
         );
       })}
     </div>
