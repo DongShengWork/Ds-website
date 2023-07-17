@@ -3,8 +3,15 @@ export default () => {
     <div className="about">
       <img src="https://my-dev-ops.oss-cn-beijing.aliyuncs.com/website/18275334.png" />
       <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
+        <h3>2012.09 - 2016.06</h3>
+        <h4>武汉工商学院（本科）</h4>
+      </div>
+      <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
+        <a>计算机科学与技术</a>
+      </div>
+      <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
         <h3>丁云亮(前端工程师)</h3>
-        <a>@阿里巴巴</a>
+        <a>@阿里巴巴 (生态用工)</a>
       </div>
       <div style={{ display: 'flex', gap: 20, alignItems: 'center' }}>
         <a href="https://github.com/yunliang-ding" target="_blank">
