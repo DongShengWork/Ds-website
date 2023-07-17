@@ -51,7 +51,7 @@ const menus = [
   },
   {
     title: 'ice 飞冰',
-    icon: 'https://v3.ice.work/img/logo.png',
+    icon: 'https://my-dev-ops.oss-cn-beijing.aliyuncs.com/website/ice.png',
     href: 'https://v3.ice.work/docs/guide/start/',
   },
   {

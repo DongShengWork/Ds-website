@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "个人主页",
   "dependencies": {
-    "yl-design": "0.0.1",
+    "yl-design": "0.0.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "@fullpage/react-fullpage": "0.1.40"

@@ -21,7 +21,7 @@ export default [
   },
   {
     title: 'React基础组件库',
-    src: 'https://my-dev-ops.oss-cn-beijing.aliyuncs.com/website/1212.png',
+    src: 'https://my-dev-ops.oss-cn-beijing.aliyuncs.com/website/yl-design.png',
     href: 'http://server.yunliang.cloud/website/yl-design',
   },
   {

@@ -1,29 +1,13 @@
 import ReactFullpage from '@fullpage/react-fullpage';
-import { useLayoutEffect, useState } from 'react';
 import Advance from './advance';
 import config from './config';
 import { Carousel } from 'yl-design';
 import './index.less';
+import Tags from './tags';
 
-console.log(Carousel);
 export default () => {
-  const [spin, setSpin] = useState(true);
-  useLayoutEffect(() => {
-    setTimeout(() => {
-      document.querySelectorAll('.carousel-page').forEach((item) => {
-        const mask: any = item.querySelector('.mask');
-        const img: any = item.querySelector('.logo');
-        if (mask && img) {
-          const { width, height } = img?.getBoundingClientRect();
-          mask.style.width = width + 'px';
-          mask.style.height = height + 'px';
-        }
-      });
-      setSpin(false);
-    }, 500);
-  }, []);
   return (
-    <div className="app-pages" style={{ visibility: spin ? 'hidden' : 'visible' }}>
+    <div className="app-pages">
       <ReactFullpage
         credits={{
           enabled: false,
@@ -33,27 +17,27 @@ export default () => {
         navigation
         verticalCentered
         controlArrows
-        anchors={[
-          'advance',
-          'my-project',
-        ]}
+        anchors={['about', 'advance', 'my-project', 'ssk']}
         render={({ state, fullpageApi }) => {
           return (
             <ReactFullpage.Wrapper>
               <div className="section">
+                <h1>关于我</h1>
+              </div>
+              <div className="section">
+                <h1>相关推荐导航</h1>
                 <Advance />
               </div>
               <div className="section">
+                <h1>相关作品集合</h1>
                 <Carousel
                   showArrow
                   autoPlay
-                  // effect="fade"
-                  style={{ width: '90vw', height: '90vh' }}
+                  style={{ width: '50vw', height: '50vh' }}
                   pages={config.map((item) => {
                     return (
-                      <div key={item.title} className='carousel-page'>
+                      <div key={item.title} className="carousel-page">
                         <div className="main">
-                          <div className="mask" />
                           <div className="desc">
                             <a href={item.href} target="_blank">
                               {item.title}
@@ -91,6 +75,10 @@ export default () => {
                     );
                   })}
                 />
+              </div>
+              <div className="section">
+                <h1>相关技术栈</h1>
+                <Tags />
               </div>
             </ReactFullpage.Wrapper>
           );
