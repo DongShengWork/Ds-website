@@ -45,6 +45,11 @@ export default () => {
           );
         }}
       />
+      <div className="beian">
+        <a href="https://beian.miit.gov.cn/" target="_blank">
+          浙ICP备2023019046号-1
+        </a>
+      </div>
     </div>
   );
 };
