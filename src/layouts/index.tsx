@@ -17,7 +17,7 @@ export default () => {
         navigation
         verticalCentered
         controlArrows
-        anchors={['about', 'my-project', 'my-points', 'advance']}
+        anchors={['about', 'my-works', 'my-project', 'my-points', 'advance']}
         render={({ state, fullpageApi }) => {
           return (
             <ReactFullpage.Wrapper>

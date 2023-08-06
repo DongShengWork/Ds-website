@@ -1,4 +1,4 @@
-import { Tooltip } from "yl-design";
+import { Tooltip } from 'yl-design';
 
 const menus = [
   {
@@ -27,6 +27,16 @@ const menus = [
     href: 'https://tsejx.github.io/javascript-guidebook/',
   },
   {
+    title: '码农进阶题库',
+    icon: 'https://www.javascriptc.com/interview-tips/assets/images/code-icon.png',
+    href: 'https://www.javascriptc.com/interview-tips/zh_CN/javascript/',
+  },
+  {
+    title: '前端充电宝',
+    icon: 'http://react-core-form.oss-cn-beijing.aliyuncs.com/assets/14.png',
+    href: ' https://www.yuque.com/cuggz',
+  },
+  {
     title: 'web前端面试',
     icon: 'https://static.vue-js.com/b4b71a30-443b-11eb-85f6-6fac77c0c9b3.png',
     href: 'https://vue3js.cn/interview/',
@@ -38,8 +48,13 @@ const menus = [
   },
   {
     title: '大前端面试宝典',
-    icon: 'https://my-dev-ops.oss-cn-beijing.aliyuncs.com/website/12.png',
+    icon: 'http://react-core-form.oss-cn-beijing.aliyuncs.com/assets/13.png',
     href: 'https://lucifer.ren/fe-interview',
+  },
+  {
+    title: '冴羽的博客',
+    icon: 'https://camo.githubusercontent.com/3ebf2039add90ea46a2c178dbff080cdf975b77b98244b066614e1b42cf6806d/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f6d717971696e6766656e672f706963747572652f7172636f64655f666f725f67685f6264316133646339656166645f3235382e6a7067',
+    href: 'https://github.com/mqyqingfeng/Blog',
   },
   {
     title: '🔥 LeetCode',
@@ -94,7 +109,7 @@ export default () => {
     <div className="app-advance">
       {menus.map((menu) => {
         return (
-          <Tooltip title={menu.title} placement="top" theme='dark'>
+          <Tooltip title={menu.title} placement="top" theme="dark">
             <div
               key={menu.title}
               className="app-advance-item"
