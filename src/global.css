@@ -1,7 +1,36 @@
+@import 'yl-design/dist/index.css';
+
+:root {
+  --primary-color: #4569d4;
+  --primary-box-shadow: #d8e2fc;
+  --primary-spin-background: #d8e2fc52;
+  --font-size-base: 12px;
+  --border-color-base: #d9d9d9;
+  --text-color: rgba(0, 0, 0, 0.65);
+  --disabled-color: rgba(0, 0, 0, 0.05);
+  --border-radius-base: 2px;
+}
+
 body {
   -webkit-font-smoothing: antialiased;
 }
 
-.fp-watermark{
+.fp-watermark {
   display: none;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.yld-timeline-item-line {
+  background-color: #0000000f;
+}
+
+.yld-timeline-item-title {
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  top: -3px;
+  margin-bottom: 30px;
 }

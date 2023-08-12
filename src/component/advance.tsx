@@ -7,6 +7,11 @@ const menus = [
     href: 'https://es6.ruanyifeng.com/',
   },
   {
+    title: '阮一峰',
+    icon: 'https://lucifer.ren/fe-interview/assets/imgs/topics/js/js-cover.png',
+    href: 'https://www.ruanyifeng.com/blog/javascript/',
+  },
+  {
     title: '前端进阶之旅',
     icon: 'https://interview.poetries.top/logo.png',
     href: 'https://interview.poetries.top/',
@@ -55,6 +60,11 @@ const menus = [
     title: '冴羽的博客',
     icon: 'https://camo.githubusercontent.com/3ebf2039add90ea46a2c178dbff080cdf975b77b98244b066614e1b42cf6806d/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f6d717971696e6766656e672f706963747572652f7172636f64655f666f725f67685f6264316133646339656166645f3235382e6a7067',
     href: 'https://github.com/mqyqingfeng/Blog',
+  },
+  {
+    title: '前端随笔 FE-Essay',
+    icon: 'http://react-core-form.oss-cn-beijing.aliyuncs.com/assets/15.png',
+    href: 'https://i-want-offer.github.io/FE-Essay/',
   },
   {
     title: '🔥 LeetCode',

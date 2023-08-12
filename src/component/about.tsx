@@ -10,8 +10,8 @@ export default () => {
         <a>计算机科学与技术</a>
       </div>
       <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
-        <h3>丁云亮(前端工程师)</h3>
-        <a>@阿里巴巴 (生态用工)</a>
+        <h3>丁云亮</h3>
+        <a>前端工程师</a>
       </div>
       <div style={{ display: 'flex', gap: 20, alignItems: 'center' }}>
         <a href="https://github.com/yunliang-ding" target="_blank">
@@ -52,7 +52,7 @@ export default () => {
         </svg>
       </div>
       <div>
-        <a href="" target='_blank'>在线简历.pdf</a>
+        <a href="http://react-core-form.oss-cn-beijing.aliyuncs.com/assets/%E5%B7%A5%E4%BD%9C%E7%AE%80%E5%8E%86.pdf" target='_blank'>在线简历.pdf</a>
       </div>
     </div>
   );
