@@ -28,9 +28,12 @@ h1 {
 }
 
 .yld-timeline-item-title {
-  font-size: 16px;
   font-weight: 500;
   position: relative;
-  top: -3px;
   margin-bottom: 30px;
+}
+
+.yld-timeline-item-title p{
+  color: #999;
+  margin: 4px 0;
 }
