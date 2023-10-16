@@ -1,12 +1,13 @@
-import config from './config';
 import { Carousel } from 'yl-design';
 
-export default () => {
+export default ({
+  data = []
+}) => {
   return (
     <Carousel
       showArrow
       style={{ width: '50vw', height: '50vh' }}
-      pages={config.map((item) => {
+      pages={data.map((item: any) => {
         return (
           <div key={item.title} className="carousel-page">
             <div className="main">
