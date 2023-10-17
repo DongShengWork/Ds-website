@@ -23,6 +23,7 @@ export default () => {
         axios.get('http://api-online.yunliang.cloud/website/projects'),
         axios.get('http://api-online.yunliang.cloud/website/advances'),
       ]);
+      await new Promise(res => setTimeout(res, 1000))
       setSpin(false);
       store.tags = resList[0].data.data;
       store.projects = resList[1].data.data;
