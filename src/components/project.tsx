@@ -1,13 +1,9 @@
-import { Carousel } from 'yl-design';
+import { Carousel } from '@arco-design/web-react';
 
-export default ({
-  data = []
-}) => {
+export default ({ data = [] }) => {
   return (
-    <Carousel
-      showArrow
-      style={{ width: '50vw', height: '50vh' }}
-      pages={data.map((item: any) => {
+    <Carousel showArrow="always" style={{ width: '50vw', height: '50vh' }}>
+      {data.map((item: any) => {
         return (
           <div key={item.title} className="carousel-page">
             <div className="main">
@@ -47,6 +43,6 @@ export default ({
           </div>
         );
       })}
-    />
+    </Carousel>
   );
 };

@@ -1,7 +1,7 @@
 build/
 tests/
 demo/
-.ice/
+.lyr/
 coverage/
 **/*-min.js
 **/*.min.js

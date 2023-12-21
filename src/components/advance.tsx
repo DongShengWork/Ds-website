@@ -1,4 +1,4 @@
-import { Tooltip } from 'yl-design';
+import { Tooltip } from "@arco-design/web-react";
 
 export default ({
   data = []
@@ -7,7 +7,7 @@ export default ({
     <div className="app-advance">
       {data.map((menu: any) => {
         return (
-          <Tooltip title={menu.title} placement="top" theme="dark">
+          <Tooltip content={menu.title} position="top">
             <div
               key={menu.title}
               className="app-advance-item"

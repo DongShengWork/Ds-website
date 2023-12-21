@@ -1,12 +1,14 @@
-import ReactFullpage from '@fullpage/react-fullpage';
-import About from '@/component/about';
-import Project from '@/component/project';
-import Tags from '@/component/tags';
-import Advance from '@/component/advance';
-import Works from '@/component/works';
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable @iceworks/best-practices/no-http-url */
 import { useEffect, useState } from 'react';
+import ReactFullpage from '@fullpage/react-fullpage';
+import About from '@/components/about';
+import Project from '@/components/project';
+import Tags from '@/components/tags';
+import Advance from '@/components/advance';
+import Works from '@/components/works';
+import Loading from '@/components/loading';
 import axios from 'axios';
-import { Spin } from 'yl-design';
 import './index.less';
 
 export default () => {
@@ -23,7 +25,7 @@ export default () => {
         axios.get('http://api-online.yunliang.cloud/website/projects'),
         axios.get('http://api-online.yunliang.cloud/website/advances'),
       ]);
-      await new Promise(res => setTimeout(res, 1000))
+      await new Promise((res) => setTimeout(res, 1000));
       setSpin(false);
       store.tags = resList[0].data.data;
       store.projects = resList[1].data.data;
@@ -33,51 +35,51 @@ export default () => {
       });
     })();
   }, []);
-  return (
-    <Spin loading={spin}>
-      <div className="app-pages">
-        <ReactFullpage
-          credits={{
-            enabled: false,
-          }}
-          scrollingSpeed={600}
-          navigation
-          verticalCentered
-          controlArrows
-          anchors={['about', 'my-works', 'my-project', 'my-points', 'advance']}
-          render={({ state, fullpageApi }) => {
-            return (
-              <ReactFullpage.Wrapper>
-                <div className="section">
-                  <h1>关于我</h1>
-                  <About />
-                </div>
-                <div className="section">
-                  <h1>工作经验</h1>
-                  <Works />
-                </div>
-                <div className="section">
-                  <h1>相关作品集合</h1>
-                  <Project data={store.projects} />
-                </div>
-                <div className="section">
-                  <h1>相关技术栈</h1>
-                  <Tags data={store.tags} />
-                </div>
-                <div className="section">
-                  <h1>前端进阶导航</h1>
-                  <Advance data={store.advances} />
-                </div>
-              </ReactFullpage.Wrapper>
-            );
-          }}
-        />
-        <div className="beian">
-          <a href="https://beian.miit.gov.cn/" target="_blank">
-            浙ICP备2023019046号-1
-          </a>
-        </div>
+  return spin ? (
+    <Loading />
+  ) : (
+    <div className="app-pages">
+      <ReactFullpage
+        credits={{
+          enabled: false,
+        }}
+        scrollingSpeed={600}
+        navigation
+        verticalCentered
+        controlArrows
+        anchors={['about', 'my-works', 'my-project', 'my-points', 'advance']}
+        render={() => {
+          return (
+            <ReactFullpage.Wrapper>
+              <div className="section">
+                <h1>关于我</h1>
+                <About />
+              </div>
+              <div className="section">
+                <h1>工作经验</h1>
+                <Works />
+              </div>
+              <div className="section">
+                <h1>相关作品集合</h1>
+                <Project data={store.projects} />
+              </div>
+              <div className="section">
+                <h1>相关技术栈</h1>
+                <Tags data={store.tags} />
+              </div>
+              <div className="section">
+                <h1>前端进阶导航</h1>
+                <Advance data={store.advances} />
+              </div>
+            </ReactFullpage.Wrapper>
+          );
+        }}
+      />
+      <div className="beian">
+        <a rel="noreferrer" href="https://beian.miit.gov.cn/" target="_blank">
+          浙ICP备2023019046号-1
+        </a>
       </div>
-    </Spin>
+    </div>
   );
 };
