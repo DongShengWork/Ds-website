@@ -4,14 +4,14 @@ export default () => {
       <img src="https://my-dev-ops.oss-cn-beijing.aliyuncs.com/website/18275334.png" />
       <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
         <h3>2012.09 - 2016.06</h3>
-        <h4>武汉工商学院（本科）</h4>
+        <h4>武汉工商学院</h4>
       </div>
       <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
-        <a>计算机科学与技术</a>
+        <h4>计算机科学与技术</h4>
       </div>
       <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
         <h3>丁云亮</h3>
-        <a>前端工程师</a>
+        <h4>高级前端工程师</h4>
       </div>
       <div style={{ display: 'flex', gap: 20, alignItems: 'center' }}>
         <a href="https://github.com/yunliang-ding" target="_blank">
