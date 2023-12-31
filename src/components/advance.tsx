@@ -4,7 +4,16 @@ export default ({ data = [] }) => {
   return (
     <div className="app-advance">
       {data.map((menu: any) => {
-        return <Button key={menu.title}>{menu.title}</Button>;
+        return (
+          <Button
+            key={menu.title}
+            onClick={() => {
+              window.open(menu.href);
+            }}
+          >
+            {menu.title}
+          </Button>
+        );
       })}
     </div>
   );
