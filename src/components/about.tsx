@@ -52,7 +52,7 @@ export default () => {
         </svg>
       </div>
       <div>
-        <a href="http://react-core-form.oss-cn-beijing.aliyuncs.com/assets/%E5%B7%A5%E4%BD%9C%E7%AE%80%E5%8E%86.pdf" target='_blank'>在线简历附件.pdf</a>
+        <a href="http://lyr-cli-oss.oss-cn-beijing.aliyuncs.com/assets/%E5%B7%A5%E4%BD%9C%E7%AE%80%E5%8E%86.pdf" target='_blank'>在线简历附件.pdf</a>
       </div>
     </div>
   );
