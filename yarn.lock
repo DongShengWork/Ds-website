@@ -3265,10 +3265,10 @@ lru-cache@^6.0.0:
   resolved "https://registry.npmmirror.com/lru-cache/-/lru-cache-10.1.0.tgz#2098d41c2dc56500e6c88584aa656c84de7d0484"
   integrity sha512-/1clY/ui8CzjKFyjdvwPWJUYKiFVXG2I2cY0ssG7h4+hwk+XOIX7ZSG9Q7TW8TW3Kp3BUSqgFWBLgL4PJ+Blag==
 
-lyr-cli@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npmmirror.com/lyr-cli/-/lyr-cli-1.0.0.tgz#0985625527d544e84ceb0b70cf3734e13757965b"
-  integrity sha512-C29ZVROR/3zid3TQVvfKzGMA+FcHNOoP+66QRazhyzPj+Ig5zCem8dTTK+au+wn7XVR5Qv5dV50buWXBmIDnkA==
+lyr-cli@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.npmmirror.com/lyr-cli/-/lyr-cli-1.0.2.tgz#80edad63506090852f8f9722ed529142733d1996"
+  integrity sha512-FZgPbIUktxP+rznAaPKeqoRL7DqHMivPg7agodxFZIIK1Oe3mPRcSJqv473ZxMJXxRqxw9ITV6ZTBh9KmsNyfA==
   dependencies:
     "@babel/core" "7.23.5"
     "@koa/cors" "4.0.0"
