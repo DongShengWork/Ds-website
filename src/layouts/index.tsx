@@ -1,5 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable @iceworks/best-practices/no-http-url */
 import { useEffect, useState } from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 import About from '@/components/about';
@@ -21,9 +19,9 @@ export default () => {
   useEffect(() => {
     (async () => {
       const resList = await Promise.all([
-        axios.get('http://api-online.yunliang.cloud/website/tags'),
-        axios.get('http://api-online.yunliang.cloud/website/projects'),
-        axios.get('http://api-online.yunliang.cloud/website/advances'),
+        axios.get('https://api-online.yunliang.cloud/website/tags'),
+        axios.get('https://api-online.yunliang.cloud/website/projects'),
+        axios.get('https://api-online.yunliang.cloud/website/advances'),
       ]);
       await new Promise((res) => setTimeout(res, 1000));
       setSpin(false);
